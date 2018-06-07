@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en" class="animated fadeIn">
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" contenet="width=device-width, initial-scale=1.0">
+	<meta name="description" content="">
+	<meta name="keywords" content="">
+	<meta name="author" content="Vergil Kelley">
+	<meta http-equiv="X-UA-Compatible" content="ie-edge">
+
+	<link rel="stylesheet" type="text/css" href="weightConverter.css">
+	<link rel="stylesheet" type="text/css" href="bootstrap.min.css">
+	<link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.5.2/animate.css">
+
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+	<script src="https://unpkg.com/popper.js/dist/umd/popper.min.js"></script>
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+
+	<style>
+		
+		body{
+			margin-top: 120px;
+			background-color: #333;
+			color: #fff;
+		}
+
+		.card-block {
+			margin-left: 10px;
+		}
+	</style>
+
+	<title>Weight Converter</title>
+</head>
+<body>
+
+	<div class="container">
+		<div class="row">
+			<div class="col-md-6 offset-md-3">
+				<h1 class="display-4 text-center mb-3">Weight Converter</h1>
+				<form>
+					<div class="form-group">
+						<input type="number" id="lbsInput" class="form-control form-control-lg" placeholder="Enter Pounds...">
+					</div>
+				</form>
+				<div id="output">
+					<div class="card bg-primary mb-2">
+						<div class="card-block">
+							<h4> Grams</h4>
+							<div id="gramsOutput"></div>
+						</div>
+					</div>
+
+					<div class="card bg-success mb-2">
+						<div class="card-block">
+							<h4> Kilograms</h4>
+							<div id="kgOutput"></div>
+						</div>
+					</div>
+
+					<div class="card bg-danger mb-2">
+						<div class="card-block">
+							<h4> Ounces</h4>
+							<div id="ozOutput"></div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<script>
+		//hide output cards
+		document.getElementById('output').style.visibility = "hidden";
+		//capture pounds input
+		document.getElementById('lbsInput').addEventListener('input', function(e){
+			//display conversion cards after pounds input
+			document.getElementById('output').style.visibility = "visible";
+			//put pounds input into lbs variable
+			let lbs = e.target.value;
+			//convert pounds to grams
+			document.getElementById('gramsOutput').innerHTML = lbs/0.0022046;
+			//convert pounds to kilograms
+			document.getElementById('kgOutput').innerHTML = lbs/2.2046;
+			//convert pounds to ounces
+			document.getElementById('ozOutput').innerHTML = lbs*16;
+		});
+
+			</script>
+
+</body>
+</html>

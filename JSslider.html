@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en" class="animated fadeIn">
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" contenet="width=device-width, initial-scale=1.0">
+	<meta name="description" content="">
+	<meta name="keywords" content="">
+	<meta name="author" content="Vergil Kelley">
+	<meta http-equiv="X-UA-Compatible" content="ie-edge">
+
+	<link rel="stylesheet" type="text/css" href="udemy/img.css">
+	<link rel="stylesheet" type="text/css" href="../webDevPortfolio/css/bootstrap.min.css">
+	<link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.5.2/animate.css">
+
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+	<script src="https://unpkg.com/popper.js/dist/umd/popper.min.js"></script>
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+
+	<title>JS Slider</title>
+</head>
+<body>
+
+<img name="slide" width="400" height="200">
+
+<script>
+	
+	var i = 0; //start point
+
+	var images = [];
+
+	var time = 3000;
+
+	//image list
+	images[0] = 'img1.jpg';
+	images[1] = 'img2.jpg';
+	images[2] = 'img3.jpg';
+	images[3] = 'img4.jpg';
+	images[4] = 'img5.jpg';
+	images[5] = 'img6.jpg';
+
+	// change image
+	function changeImg(){
+		document.slide.src = images[i];
+		if(i < images.length - 1){
+			i++;
+		} else {
+			i = 0;
+		}
+		setTimeout('changeImg()', time);
+	}
+
+		window.onload =changeImg;
+
+</script>
+		
+		
+
+</body>
+</html>

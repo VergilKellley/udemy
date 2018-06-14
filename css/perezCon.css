@@ -1,0 +1,78 @@
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+
+.header {
+	position: relative;
+	height: 150px;
+	text-align: center;
+	border-bottom: 10px solid red;
+}
+
+#perez-con {
+	margin-top: 10px;
+	text-align: left;
+	line-height: 1.1rem;
+	text-transform: uppercase;
+}
+
+#perez-con h1 {
+	color: red;
+	font-size: 75px;
+	text-align: left;
+	margin-left: 70px;
+	font-style: italic;
+}
+
+#perez-con p {
+	font-size: 35px;
+	color: blue;
+	margin-left: 70px;
+}
+#search {
+	margin-top: 65px;
+}
+
+
+
+nav li {
+	display:inline-block;
+	padding:5px;
+	margin-top: 65px;
+}
+
+li a{
+	color: #000;
+	font-size: 17px;
+}
+
+.sub-header {
+	text-align: center;
+	height: 75px;
+	background: blue;
+}
+
+.contact {
+	margin-top: 25px;
+	font-size: 20px;
+	color: #fff;
+}
+
+.header-photo img {
+	position: relative;
+	max-height: 300px;
+	min-width: 100%;
+	padding-left: 0;
+	padding-right: 0;
+}
+
+.container-fluid img {
+	padding-left: 0;
+	padding-right: 0;
+	margin-left: 0;
+	margin-right: 0;
+	width: 100%;
+}
+
